@@ -14,3 +14,12 @@ input {
   font-weight: bold;
   padding: 0px 10px;
 }
+
+button {
+  background-color: #F0F8FF;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
