@@ -7,7 +7,10 @@ const api = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(trick)
-    })
+    });
+  },
+  deleteItem(id) {
+    return fetch(`http://localhost:3001/api/v1/tricks/${id}`, { method: 'DELETE' }).then(response => response.json());
   }
 };
 

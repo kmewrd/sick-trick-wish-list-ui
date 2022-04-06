@@ -21,6 +21,10 @@ class App extends Component {
     api.postData(trick).then(() => this.getAllTricks()).catch(err => this.setState({ error: err }))
   }
 
+  // deleteTrick = id => {
+
+  // }
+
   render() {
     return (
       <div className="App">
