@@ -4,9 +4,10 @@ import './TrickCard.css';
 const TrickCard = ({ id, name, stance, obstacle, tutorial }) => {
   return (
     <div className='card'>
-      <h2>{name}</h2>
-      <h2>Obstacle: {obstacle}</h2>
-      <h2>Link to tutorial: {tutorial}</h2>
+      <h3>{stance && stance} {name}</h3>
+      <h3>Obstacle: {obstacle}</h3>
+      <h3>Link to Tutorial:</h3>
+      <h3><a href={tutorial}>{tutorial}</a></h3>
     </div>
   )
 }
