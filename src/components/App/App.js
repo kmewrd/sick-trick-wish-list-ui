@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
         <h1>Sick Trick Wish List</h1>
         <Form addTrick={this.addTrick}/>
-        <Tricks tricks={this.state.tricks}/>
+        <Tricks tricks={this.state.tricks} deleteTrick={this.deleteTrick}/>
       </div>
     );
   }
