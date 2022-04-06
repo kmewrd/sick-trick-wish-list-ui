@@ -43,6 +43,10 @@ describe('Homepage', () => {
       .get('input[name="tutorial"]')
       .type('https://www.youtube.com/watch?v=n_lgPml1ZoM')
       .get('button')
-      .click();
+      .click()
+      .get('.tricks-container')
+      .should('contain', 'Regular Treflip')
+      .and('contain', 'Obstacle: Pool')
+      .and('contain', 'https://www.youtube.com/watch?v=n_lgPml1ZoM')
   })
 });
