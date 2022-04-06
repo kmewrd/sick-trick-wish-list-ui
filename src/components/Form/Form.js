@@ -24,7 +24,7 @@ class Form extends Component {
   
   render() {
     return (
-      <form>
+      <form className='trick-form'>
         <select name='stance' value={this.state.stance} onChange={e => this.updateForm(e)}>
           <option value='' disabled>Choose your Stance</option>
           <option value='regular'>Regular</option>

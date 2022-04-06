@@ -3,6 +3,7 @@ const cleanData = tricks => {
     trick.stance = capitalize(trick.stance);
     trick.name = capitalize(trick.name);
     trick.obstacle = capitalize(trick.obstacle);
+    return trick;
   })
   return tricks;
 }
