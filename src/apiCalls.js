@@ -6,7 +6,7 @@ const api = {
     return fetch('http://localhost:3001/api/v1/tricks', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: trick
+      body: JSON.stringify(trick)
     })
   }
 };

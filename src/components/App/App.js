@@ -18,7 +18,7 @@ class App extends Component {
   componentDidMount = () => this.getAllTricks();
 
   addTrick = trick => {
-    this.setState({ tricks: [...this.state.tricks, trick] });
+    api.postData(trick).then(() => this.getAllTricks()).catch(err => this.setState({ error: err }))
   }
 
   render() {
