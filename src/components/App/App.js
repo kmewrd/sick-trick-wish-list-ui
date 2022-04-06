@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import fetchData from '../../apiCalls';
+import api from '../../apiCalls';
 import Tricks from '../Tricks/Tricks';
 import Form from '../Form/Form';
 import './App.css';
@@ -13,7 +13,7 @@ class App extends Component {
     }
   }
 
-  getAllTricks = () => fetchData().then(data => this.setState({ tricks: data })).catch(err => this.setState({ error: err }));
+  getAllTricks = () => api.fetchData().then(data => this.setState({ tricks: data })).catch(err => this.setState({ error: err }));
 
   componentDidMount = () => this.getAllTricks();
 
