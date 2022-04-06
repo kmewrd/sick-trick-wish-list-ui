@@ -8,6 +8,7 @@ const TrickCard = ({ id, name, stance, obstacle, tutorial }) => {
       <h3>Obstacle: {obstacle}</h3>
       <h3>Link to Tutorial:</h3>
       <h3><a href={tutorial}>{tutorial}</a></h3>
+      <button className='delete-button'>X</button>
     </div>
   )
 }
