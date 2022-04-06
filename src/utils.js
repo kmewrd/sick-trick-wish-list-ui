@@ -1,6 +1,10 @@
-const cleanData = data => {
-  data.stance = capitalize(data.stance);
-  data.name = capitalize(data.name);
+const cleanData = tricks => {
+  tricks.map(trick => {
+    trick.stance = capitalize(trick.stance);
+    trick.name = capitalize(trick.name);
+    trick.obstacle = capitalize(trick.obstacle);
+  })
+  return tricks;
 }
 
 const capitalize = property => {
