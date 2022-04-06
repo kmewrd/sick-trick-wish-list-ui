@@ -14,6 +14,8 @@ class App extends Component {
 
   getAllTricks = () => fetchData().then(data => this.setState({ tricks: data })).catch(err => this.setState({ error: err }));
 
+  componentDidMount = () => this.getAllTricks();
+
   render() {
     return (
       <div className="App">
