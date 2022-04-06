@@ -17,11 +17,15 @@ class App extends Component {
 
   componentDidMount = () => this.getAllTricks();
 
+  addTrick = trick => {
+    this.setState({ tricks: [...this.state.tricks, trick] });
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Sick Trick Wish List</h1>
-        <Form />
+        <Form addTrick={this.addTrick}/>
         <Tricks tricks={this.state.tricks}/>
       </div>
     );
