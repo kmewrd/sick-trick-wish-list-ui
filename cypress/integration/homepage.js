@@ -38,6 +38,22 @@ describe('Homepage', () => {
       .and('have.attr', 'type', 'text')
   })
 
+  it('Should update field values when selections and inputs are changed.', () => {
+    cy.visit('http://localhost:3000')
+      .get('select[name="stance"]')
+      .select('Regular')
+      .should('have.value', 'regular')
+      .get('input[name="name"]')
+      .type('Treflip')
+      .should('have.value', 'Treflip')
+      .get('select[name="obstacle"]')
+      .select('Pool')
+      .should('have.value', 'pool')
+      .get('input[name="tutorial"]')
+      .type('https://www.youtube.com/watch?v=n_lgPml1ZoM')
+      .should('have.value', 'https://www.youtube.com/watch?v=n_lgPml1ZoM')
+  })
+
   it('Should submit the trick on button click and have it immediately display on the DOM.', () => {
     cy.visit('http://localhost:3000')
       .get('select[name="stance"]')
