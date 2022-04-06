@@ -8,7 +8,7 @@ class Form extends Component {
       stance: '',
       name: '',
       obstacle: '',
-      link: ''
+      tutorial: ''
     }
   }
 
@@ -39,7 +39,7 @@ class Form extends Component {
           <option value='stairs'>Stairs</option>
           <option value='pool'>Pool</option>
         </select>
-        <input name='link' type='text' placeholder='Link to Tutorial' value={this.state.link} onChange={e => this.updateForm(e)}/>
+        <input name='tutorial' type='text' placeholder='Link to Tutorial' value={this.state.tutorial} onChange={e => this.updateForm(e)}/>
         <button onClick={e => this.submitTrick(e)}>Send It!</button>
       </form>
     )

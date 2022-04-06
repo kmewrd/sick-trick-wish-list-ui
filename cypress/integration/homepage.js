@@ -27,7 +27,7 @@ describe('Homepage', () => {
       .and('have.attr', 'type', 'text')
 
     cy.visit('http://localhost:3000')
-      .get('form input[name="link"]')
+      .get('form input[name="tutorial"]')
       .should('have.attr', 'placeholder', 'Link to Tutorial')
       .and('have.attr', 'type', 'text')
   })
@@ -40,7 +40,7 @@ describe('Homepage', () => {
       .type('Treflip')
       .get('select[name="obstacle"]')
       .select('Pool')
-      .get('input[name="link"]')
+      .get('input[name="tutorial"]')
       .type('https://www.youtube.com/watch?v=n_lgPml1ZoM')
       .get('button')
       .click();
