@@ -33,7 +33,7 @@ class Form extends Component {
         <input name='name' type='text' placeholder='Name of Trick' value={this.state.name} onChange={e => this.updateForm(e)}/>
         <select name='obstacle' value={this.state.obstacle} onChange={e => this.updateForm(e)}>
           <option value='' disabled>Choose your Obstacle</option>
-          <option value='flatground'>Flatground</option>
+          <option value='flatground'>Flat Ground</option>
           <option value='ledge'>Ledge</option>
           <option value='rail'>Rail</option>
           <option value='stairs'>Stairs</option>

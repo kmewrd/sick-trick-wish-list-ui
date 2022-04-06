@@ -11,5 +11,24 @@ describe('Homepage', () => {
       .should('contain', 'Choose your Stance')
       .and('contain', 'Regular')
       .and('contain', 'Switch')
+
+    cy.visit('http://localhost:3000')
+      .get('form select[name="obstacle"]')
+      .should('contain', 'Choose your Obstacle')
+      .and('contain', 'Pool')
+      .and('contain', 'Rail')
+      .and('contain', 'Stairs')
+      .and('contain', 'Flat Ground')
+      .and('contain', 'Ledge')
+
+    cy.visit('http://localhost:3000')
+      .get('form input[name="name"]')
+      .should('have.attr', 'placeholder', 'Name of Trick')
+      .and('have.attr', 'type', 'text')
+
+    cy.visit('http://localhost:3000')
+      .get('form input[name="link"]')
+      .should('have.attr', 'placeholder', 'Link to Tutorial')
+      .and('have.attr', 'type', 'text')
   })
 });
