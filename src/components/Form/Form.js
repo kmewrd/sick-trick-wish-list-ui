@@ -20,6 +20,11 @@ class Form extends Component {
     e.preventDefault();
     let trick = {...this.state, id: Date.now()}
     this.props.addTrick(trick);
+    this.clearForm();
+  }
+
+  clearForm = () => {
+    this.setState({ stance: '', name: '', obstacle: '', tutorial: '' })
   }
   
   render() {
