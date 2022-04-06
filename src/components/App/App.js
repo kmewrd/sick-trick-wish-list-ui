@@ -21,9 +21,9 @@ class App extends Component {
     api.postData(trick).then(() => this.getAllTricks()).catch(err => this.setState({ error: err }))
   }
 
-  // deleteTrick = id => {
-
-  // }
+  deleteTrick = id => {
+    api.deleteItem(id).then(data => this.setState({ tricks: data })).catch(err => this.setState({ error: err }));
+  }
 
   render() {
     return (
