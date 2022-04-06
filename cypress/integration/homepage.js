@@ -5,7 +5,13 @@ describe('Homepage', () => {
       .contains('Sick Trick Wish List')
   })
 
-  it('Should contain a form for users to submit a new trick. The form should contain four fields: stance, name of trick, obstacle, and a link.', () => {
+  it('Should contain a form for users to submit a new trick.', () => {
+    cy.visit('http://localhost:3000')
+      .get('form')
+      .get('button')
+  })
+
+  it('Should contain four form fields: stance, name of trick, obstacle, and a link.', () => {
     cy.visit('http://localhost:3000')
       .get('form select[name="stance"]')
       .should('contain', 'Choose your Stance')
